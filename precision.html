@@ -22,6 +22,8 @@
 
   <script>
     var stopTime = undefined
+    let startTimer = undefined;
+      let RandCount = 0;
 
     function recordTime() {
       stopTime = Date.now()
@@ -29,7 +31,8 @@
     }
 
     function startTime() {
-      for (let i = 0; i < 5; i++) {
+      random = Math.floor(Math.random() * 9)+2;
+      for (let i = 0; i < random; i++) {
         setTimeout(function () {
           document.getElementById("counter").innerHTML = i;
         }, (4 - i) * 1000);
